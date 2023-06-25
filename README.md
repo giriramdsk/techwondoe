@@ -17,9 +17,9 @@ Requires
 
 - Docker v24.0.2
 
-  
+  ## Getting Started
 
-# Clone the repository:
+# 1 Clone the repository:
 
   
 
@@ -29,7 +29,7 @@ Master branch
 
   
 
-# project Setup
+# 2 project Setup
 
 cd project-name
 
@@ -37,57 +37,78 @@ npm install
 
   
 
-# Docker Setup
+# 3 Docker Setup
 
-install desktop docker
+ ## 1. Install Docker Desktop on your machine.
 
-  
-
-## Postgresql setup inside docker
-
-  
-
+##  2. Pull the PostgreSQL Docker image:
 docker pull postgres
+
+##  3. Run a PostgreSQL container:
 
 docker run --name postgres-container -e POSTGRES_PASSWORD=<password> -p 5432:5432 -d postgres
 
-## check docker
+##  4. Check if the Docker container is running:
 
 docker ps
 
-psql -h localhost -p 5432 -U postgres //db connect
+##  5. Connect to the PostgreSQL database:
 
-psql -U <username> -d <database>
+psql -h localhost -p 5432 -U postgres
 
-## Need to create db inside pg
 
-**CREATE DATABASE techwonde;**
+##  6. Create a new database:
 
-\c techwonde //check db the db
+CREATE DATABASE techwondoe
 
-\dt -tables // check tables
+	Note: Replace `<username>` and `<database>` with your desired values.
+
+##  7. Verify the database creation:
+
+\c techwondoe
+
+To check the tables, use the command:
+
+\dt
 
   
-
-# Project setup in Docker
-
-inside project folder open and stepout **cd/**
-
-  
-
 Setup **.env** configuration
 
+1. Set up the environment variables by creating a `.env` file in the project root directory. Example:
+
+App Configuration
+APP_PORT=3000
+
+Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=<password>
+DB_DATABASE=techwondoe
+
+JWT Configuration
+JWT_SECRET=your_jwt_secret
+JWT_EXPIRATION_TIME=3600
+
+
+
+# Building and Running the Project with Docker
+
+inside project folder open and stepout **cd/**
   
-
+## Build the Docker image:
 **docker build .\techwonde\ -t giriram/techwonde**
-
+## Run the Docker container
 **docker run -p 8080:3000 giriram/techwonde**
 
   
 
-Accessing the platform from swagger UI
-
+## Access the API platform from Swagger UI
   
 
 http://localhost:8080/api
+
+## Additional Information
+
+For any further clarification or questions, please feel free to reach out. Enjoy coding!
 
