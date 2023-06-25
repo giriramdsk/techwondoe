@@ -76,19 +76,26 @@ Setup **.env** configuration
 
 1. Set up the environment variables by creating a `.env` file in the project root directory. Example:
 
-App Configuration
+# App Configuration
 APP_PORT=3000
 
-Database Configuration
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=postgres
-DB_PASSWORD=<password>
-DB_DATABASE=techwondoe
+# Database Configuration
+DB_HOST=172.17.0.2
 
-JWT Configuration
-JWT_SECRET=your_jwt_secret
+DB_PORT=5432
+
+DB_USERNAME='name'
+
+DB_PASSWORD='password'
+
+DB_DATABASE='techwondoe'
+
+# JWT Configuration
+
+JWT_SECRET='grokonez-super-secret-key'
+
 JWT_EXPIRATION_TIME=3600
+
 
 
 
