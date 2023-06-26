@@ -115,6 +115,11 @@ inside project folder open and stepout **cd/**
 
 http://localhost:8080/api
 
+# Login details
+
+**username: 'techwondoe', password: 'techwondoe'**
+**username: 'techwondoe1', password: 'techwondoe1'**
+
 ## Additional Information
 
 For any further clarification or questions, please feel free to reach out. Enjoy coding!
