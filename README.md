@@ -118,6 +118,8 @@ http://localhost:8080/api
 # Login details
 
 **username: 'techwondoe', password: 'techwondoe'**
+
+
 **username: 'techwondoe1', password: 'techwondoe1'**
 
 ## Additional Information
